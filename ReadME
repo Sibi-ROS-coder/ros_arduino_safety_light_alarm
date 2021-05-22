@@ -1,0 +1,30 @@
+PART 1:
+	1.Connect the Arduino
+	2.check the port connection name in Arduino Software
+	3.Tools -> Ports
+	4.open a terminal
+	5.type <sudo chmod 777 "port connection name">
+	6.example: sudo chmod 777 /dev/ttyUSB0
+	7.copy the ros or ros.ino code in arduino and UPload the code
+PART 2
+	1.install ros serial Library for arduino
+	2.http://wiki.ros.org/rosserial_arduino
+	3.You need to import the ROS libraries to Arduino Library
+	4.https://roboticsknowledgebase.com/wiki/common-platforms/ros/ros-arduino-interface/
+	5. for installing ros serial
+	6. sudo apt-get install ros-distro-rosserial-arduino
+	7. sudo apt-get install ros-distro-rosserial
+	8. for importing the ros libraries for Arduino
+	9. run this in the Arduino file saved folder <rosrun rosserial_arduino make_libraries.py .>
+	10. check the 4th one if you doubts about installing
+PART 3
+	1.open a terminal
+	2.after Uploading the Arduino code
+	3. run thi ros command
+	4. rosrun rosserial_python serial_node.py or rosrun rosserial_python serial_node.py /port connection address
+	5. example : rosrun rosserial_python serial_node.py /dev/ttyUSB0
+Part 4
+	1. Run the led python code for testing
+	2. give permission to python file
+	3.sudo chmod 777 led.py
+	4. rosrun packagename led.py
